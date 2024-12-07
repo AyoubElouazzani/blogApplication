@@ -88,128 +88,21 @@
           <label for="year-2023">2023</label>
         </div>
       </div>
-
+      {% for post in posts %}
       <div class="home-article">
         <div class="home-article-img">
-          <img src="img/3.png" alt="article" />
+          <img src="{% static 'img/3.png' %}" alt="article" />
         </div>
         <div class="home-article-content font1">
           <a href="/blogpost.html">
-            <h3>
-              The Future of Work: How AI and Automation are Changing the Job
-              Landscape
-            </h3>
+            <h3>{{post.title}}</h3>
           </a>
 
-          <div>Byomkesh Mahato</div>
-          <span>07 January | 6 min read</span>
+          <div></div>
+          <span>{{ post.created_at }}</span>
         </div>
       </div>
-      <div class="home-article">
-        <div class="home-article-img">
-          <img src="img/1.png" alt="article" />
-        </div>
-        <div class="home-article-content font1">
-          <a href="/blogpost.html">
-            <h3>
-              The Psychology of Procrastination: Understanding Why We Delay and
-              How to Overcome It
-            </h3>
-          </a>
-
-          <div>Byomkesh Mahato</div>
-          <span>12 February | 5 min read</span>
-        </div>
-      </div>
-      <div class="home-article">
-        <div class="home-article-img">
-          <img src="img/2.png" alt="article" />
-        </div>
-        <div class="home-article-content font1">
-          <a href="/blogpost.html">
-            <h3>10 Ways to Improve Your Mental Health and Well-Being</h3>
-          </a>
-
-          <div>Byomkesh Mahato</div>
-          <span>17 March | 4 min read</span>
-        </div>
-      </div>
-      <div class="home-article">
-        <div class="home-article-img">
-          <img src="img/1.png" alt="article" />
-        </div>
-        <div class="home-article-content font1">
-          <a href="/blogpost.html">
-            <h3>
-              Why Mindfulness Matters: The Benefits of Practicing Mindfulness in
-              Your Daily Life
-            </h3>
-          </a>
-
-          <div>Byomkesh Mahato</div>
-          <span>21 April | 6 min read</span>
-        </div>
-      </div>
-      <div class="home-article">
-        <div class="home-article-img">
-          <img src="img/11.svg" alt="article" />
-        </div>
-        <div class="home-article-content font1">
-          <a href="/blogpost.html">
-            <h3>
-              The Power of Positive Thinking: How Optimism Can Improve Your Life
-            </h3>
-          </a>
-
-          <div>Byomkesh Mahato</div>
-          <span>18 May | 5 min read</span>
-        </div>
-      </div>
-      <div class="home-article">
-        <div class="home-article-img">
-          <img src="img/3.png" alt="article" />
-        </div>
-        <div class="home-article-content font1">
-          <a href="/blogpost.html">
-            <h3>Navigating the Job Market: Tips for Finding Your Dream Job</h3>
-          </a>
-
-          <div>Byomkesh Mahato</div>
-          <span>21 June | 3 min read</span>
-        </div>
-      </div>
-      <div class="home-article">
-        <div class="home-article-img">
-          <img src="img/2.png" alt="article" />
-        </div>
-        <div class="home-article-content font1">
-          <a href="/blogpost.html">
-            <h3>
-              The Benefits of Learning a Second Language: Why Bilingualism is
-              Good for Your Brain and Your Career
-            </h3>
-          </a>
-
-          <div>Byomkesh Mahato</div>
-          <span>16 July | 4 min read</span>
-        </div>
-      </div>
-      <div class="home-article">
-        <div class="home-article-img">
-          <img src="img/11.svg" alt="article" />
-        </div>
-        <div class="home-article-content font1">
-          <a href="/blogpost.html">
-            <h3>
-              The Ethics of AI: Exploring the Social and Moral Implications of
-              Artificial Intelligence
-            </h3>
-          </a>
-
-          <div>Byomkesh Mahato</div>
-          <span>08 August | 6 min read</span>
-        </div>
-      </div>
+      {% endfor %}
     </div>
 
     <div class="footer">
