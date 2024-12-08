@@ -1,4 +1,4 @@
-{% block content %} {% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,7 +21,7 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
       </div>
       <div class="nav-right">
@@ -36,6 +36,8 @@
         </form>
       </div>
     </nav>
+  </body>
+</html>
     <div class="max-width-1 m-auto">
       <hr />
     </div>
@@ -58,7 +60,7 @@
         </p>
       </div>
       <div class="content-right">
-        <img src="img/home.svg" alt="iBlog" />
+        <img src="{% static 'img/home.svg' %}" alt="iBlog" />
       </div>
     </div>
 
@@ -91,7 +93,7 @@
       {% for post in posts %}
       <div class="home-article">
         <div class="home-article-img">
-          <img src="{% static 'img/3.png' %}" alt="article" />
+          <img src="{{post.image.url}}" alt="article" />
         </div>
         <div class="home-article-content font1">
           <a href="/blogpost.html">
@@ -114,4 +116,3 @@
   </body>
 </html>
 
-{% endblock %}
